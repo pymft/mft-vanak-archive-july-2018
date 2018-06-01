@@ -1,15 +1,22 @@
-inp = [1, 2, 3, 4, 100, 2]
-# out = [4800 , 2400 , 1600 , 1200 , 48   , 2400 ]
+def answer(lst):
+    count_zero = lst.count(0)
+    if count_zero == 1:
+        zero_item_index = lst.index(0)
+        out = [0 for i in lst]
+        A = 1
+        for val in lst:
+            if val != 0:
+                A *= val
+        out[zero_item_index] = A
+        return out
+    elif count_zero > 1:
+        return [0 for i in lst]
+    else:
+        A = 1
+        for val in lst:
+            A *= val
+        return [A/x for x in lst]
 
-# order O
-A = 1
-for val in inp:
-    A *= val
+inp = [1, 0, 3, 0, 100, 2]
 
-def mapfun(x):
-    return A/x
-
-
-print(A)
-out = map(lambda x: A/x, inp)
-print(list(out))
+print(answer(inp))
