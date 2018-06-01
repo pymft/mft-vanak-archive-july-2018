@@ -1,2 +1,3 @@
 print("hello")
-print('another line from my computer ')
+for i in range(10):
+    print(i)
