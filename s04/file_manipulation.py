@@ -3,18 +3,18 @@ f = open('wasteland.txt', 'r')
 # read r
 # write w
 # append a
-
 text = f.read()
-lines = text.split('\n')
+f.close()
 
-for i, line in enumerate(lines):
-    print(i, line)
+words = list(text.strip().split())
+unique_words = set(words)
+
+res = {item: words.count(item) for item in unique_words}
+
+#                    |<==list==>|
+sorted_list = sorted(res.items(), key=lambda x: x[1], reverse=True)
 
 
-#
-# get a list of words  : words
-#
-# list of unique words : unique_words
-#
-# dict -- word: occurances
-#
+for word, rep in sorted_list[:10]:
+    print(word, '--->', rep)
+
