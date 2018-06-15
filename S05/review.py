@@ -1,14 +1,18 @@
 # decorator
 
-var = 10
+def my_function(out):
+    def inner():
+        return out
 
-def echo(x, y):
-    # shadowing
-    var = 1
-    print(locals())
-    print(globals())
-    return x
+    return inner
+
+# 0x03A18E40
+# 0x02FF8E40
+
+echoed_val = 'Salut'
+returned_function = my_function(echoed_val)
+res_of_returned_function = returned_function()
+
+print(res_of_returned_function)
 
 
-echo(1, 2)
-print(echo)
