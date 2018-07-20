@@ -1,1 +1,3 @@
 http://docs.sqlalchemy.org/en/latest/orm/tutorial.html
+https://pythonspot.com/orm-with-sqlalchemy/
+https://www.pythoncentral.io/introductory-tutorial-python-sqlalchemy/
