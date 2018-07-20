@@ -1,4 +1,4 @@
-## STEPS
+f## STEPS
 1. create a virtualenv, if you have't `virtualenv` installed on your computer
 use this command:
 ```bash

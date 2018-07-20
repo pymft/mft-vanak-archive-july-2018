@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th></th>
+        {% for r in range(1, width+1) %}
+            <th style="background-color: gray;">{{r}}</th>
+        {% endfor %}
+    </tr>
+    {% for r in range(1, height+1) %}
+    <tr>
+        <th style="background-color: gray;">{{r}}</th>
+        {% for c in range(1, width+1) %}
+            {% if r % 2 == 0 %}
+                <td style="background-color: aqua">{{ r * c}}</td>
+            {% else %}
+                <td>{{ r * c}}</td>
+            {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
